@@ -1,0 +1,32 @@
+server:
+  port: 9527
+spring:
+  application:
+    name: springcloud-gateway
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: payment_routh_1 #payment_route
+          uri: lb://PROVIDER-PAYMENT
+          predicates:
+            - Path=/payment/lb
+
+        - id: payment_routh_2 #payment_route
+          uri: lb://PROVIDER-PAYMENT
+          predicates:
+            - Path=/payment/get/**
+            - Cookie=username,hb
+eureka:
+  instance:
+    hostname: gateway-service
+  client: #服务提供者provider注册进eureka服务列表内
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka

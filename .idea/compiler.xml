@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springcloud-config-client3355" />
+        <module name="springcloud-config-client3366" />
+        <module name="provider-hystrix-payment8005" />
+        <module name="springcloud-stream-rabbitMQ-provider8801" />
+        <module name="provider-zk-payment8004" />
+        <module name="consumer-openFeign-order80" />
+        <module name="springcloud-stream-rabbitMQ-consumer9901" />
+        <module name="springcloud-stream-rabbitMQ-consumer9902" />
+        <module name="consumer-consul-order80" />
+        <module name="common-api" />
+        <module name="consumer-hystrix-order80" />
+        <module name="springcloud-config3344" />
+        <module name="provider-consul-payment8006" />
+        <module name="springcloud-gateway9527" />
+        <module name="consumer-order80" />
+        <module name="eureka-server7001" />
+        <module name="provider-payment8001" />
+        <module name="eureka-server7002" />
+        <module name="provider-payment8003" />
+        <module name="provider-payment8002" />
+        <module name="consumer-zk-order80" />
+        <module name="consumer-zk-order81" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="consumer-zk-order81" target="1.8" />
+      <module name="untitled" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

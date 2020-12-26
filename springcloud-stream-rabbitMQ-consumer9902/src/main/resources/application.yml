@@ -1,0 +1,37 @@
+server:
+  port: 9902
+
+spring:
+  application:
+    name: stream-rabbitMQ-Consumer
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: springCloudStreamExchange
+          contentType: application/json
+          binder: defaultRabbit
+          group: g1
+      binders:
+        defaultRabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5672
+                username: guest
+                password: guest
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    lease-expiration-duration-in-seconds: 2
+    lease-renewal-interval-in-seconds: 5
+    instance-id: recive-9902.com
+    prefer-ip-address: true
+
+
+
+
